@@ -1,0 +1,34 @@
+.header#home
+  .header__page#particles-js
+    .header.pageContent
+      .header__upperPart
+        a.header__logo(href="javascript:void(0)") 
+          h1.header__logoTitle M
+          .header__logoWrapper.header__logoWrapper--rotated
+            img.header__logoIcon(src="/src/img/loupeWhite.png" alt="loupeIcon")
+          h1.header__logoTitle N
+          .header__logoWrapper.header__logoWrapper--stay
+            img.header__logoIcon(src="/src/img/loupeWhite.png" alt="loupeIcon")
+        .header__navbar 
+          ul.header__list 
+            li.header__item 
+                a.header__link(href="#home") Home
+            li.header__item 
+                a.header__link(href="#features") Features
+            li.header__item 
+                a.header__link(href="#about") About 
+            li.header__item 
+                a.header__link(href="#videoBlock") Video Block
+            li.header__item 
+                a.header__link(href="#freeTrials") Free Trials
+            li.header__item.header__item--active
+              a.header__link.header__link--active(href="#") Try Demo
+      
+      .header__title
+        p.header__subtitleUpper lorem ipsym dolor sit amet
+        h1.header__titleMain NISI EGET LIGULA!
+        p.header__subtitleDown Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisi eget ligula ultricies porta. Integer in sapien non felis.
+      
+
+  script(type='text/javascript' src='/src/js/particles.min.js')
+  script(type='text/javascript' src='/src/js/app.js')

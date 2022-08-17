@@ -1,0 +1,20 @@
+- let pageTitle = 'Mono'
+
+doctype html 
+html(lang="en")
+  head 
+    title= pageTitle
+    link(rel='icon' type='image/x-icon' href='/src/img/favicon.png') 
+    style 
+      include styles/style.css
+  body 
+    include modules/header
+    include modules/laptop
+    include modules/purchase
+    include modules/stats
+    include modules/video
+    include modules/freeTrials
+    include modules/partners
+    include modules/footer
+
+    script(type='text/javascript' src="/src/js/script.js")

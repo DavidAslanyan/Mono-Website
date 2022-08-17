@@ -1,0 +1,694 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head> 
+    <title>Mono</title>
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png"/>
+    <style>
+       body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.pageContent {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+#particles-js {
+  background-color: #51595b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.704)), url("/src/img/woman-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__page {
+  background-color: #51595b;
+  min-height: 1018px;
+}
+
+.header {
+  transform: scaleX(-1);
+}
+.header__upperPart {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  gap: 3px;
+  padding: 30px 0 0 15px;
+}
+.header__navbar {
+  padding: 0 15px;
+}
+.header__logoTitle {
+  color: #fff;
+  font-weight: 200;
+}
+.header__logoWrapper {
+  display: flex;
+  padding: 23px 0;
+  width: 100%;
+  max-width: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.header__logoWrapper--rotated {
+  transform: rotate(180deg);
+}
+.header__logoWrapper--stay {
+  padding: 26px 0;
+}
+.header__logoIcon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.header__list {
+  display: flex;
+  padding: 44px 0;
+}
+.header__item {
+  display: inline-block;
+}
+.header__link {
+  display: block;
+  position: relative;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+.header__link:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+  transition: all 0.5s;
+}
+.header__link:before {
+  transition: all 0.5s;
+}
+.header__link:hover {
+  color: #ffa500;
+}
+.header__link:hover:after {
+  width: 80%;
+}
+.header__link--active {
+  padding: 10px 23px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+.header__link--active:hover {
+  border-color: #ffa500;
+  color: #fff;
+  background-color: #ffa500;
+}
+.header__link--active:after {
+  display: none;
+}
+.header__title {
+  position: absolute;
+  left: 330px;
+  margin: 0 auto;
+  padding: 60px 0;
+  width: 100%;
+  max-width: 525px;
+}
+@media (max-width: 1100px) {
+  .header__title {
+    left: 240px;
+  }
+}
+.header__titleMain {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 100px;
+  color: #fff;
+}
+.header__subtitleUpper {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.09);
+}
+.header__subtitleDown {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.09);
+}
+
+.content__laptop {
+  position: relative;
+  bottom: 200px;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 680px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.content__laptopImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content__iconWrapper {
+  padding: 0 30px 0 15px;
+  display: flex;
+  width: 100%;
+  max-width: 54px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.content__icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content__title {
+  text-align: center;
+  width: 100%;
+  font-size: 28px;
+  font-weight: 300;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.content__boxes {
+  flex-wrap: wrap;
+}
+.content__boxesRowOne {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.content__boxesRowTwo {
+  padding: 0 0 82px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content__infoBox {
+  display: flex;
+}
+.content__boxTitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  color: #222222;
+  transition: color 0.25s linear;
+}
+.content__boxTitle:hover {
+  color: #006aff;
+}
+.content__boxInfo {
+  width: 100%;
+  max-width: 280px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #51595b;
+}
+.content__scrollUp {
+  position: fixed;
+  top: 600px;
+  right: 30px;
+  display: flex;
+  width: 100%;
+  max-width: 44px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 0.25s linear;
+}
+.content__scrollIcon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.purchase {
+  background-color: #333;
+}
+.purchase__content {
+  display: flex;
+  justify-content: space-between;
+}
+.purchase__title {
+  padding: 37px 0 0 15px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #fff;
+}
+.purchase__info {
+  padding: 0 0 37px 15px;
+  width: 100%;
+  max-width: 650px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  color: #fff;
+}
+.purchase__right {
+  padding: 80px 15px 0 0;
+}
+.purchase__btn {
+  position: relative;
+  right: 30px;
+  padding: 14px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.25s linear;
+}
+.purchase__btn:hover {
+  background-color: #ffa500;
+  border-color: #ffa500;
+  color: #000;
+}
+.purchase__btnDemo {
+  border-bottom: 1px solid #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.25s linear;
+}
+.purchase__btnDemo:hover {
+  color: #ffa500;
+  border-color: #000;
+}
+
+.stats {
+  padding: 58px 0;
+  display: flex;
+}
+.stats__title {
+  padding: 0 15px;
+  width: 100%;
+  max-width: 558px;
+  line-height: 38px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+.stats__info {
+  padding: 0 15px;
+  width: 100%;
+  max-width: 558px;
+  line-height: 32px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #51595b;
+}
+.stats__imgWrapper {
+  padding: 0 0 0 30px;
+  display: flex;
+  width: 100%;
+  max-width: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.stats__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.stats__numbers {
+  padding: 0 15px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.stats__numberEach {
+  display: flex;
+  flex-direction: column;
+}
+.stats__numberEach--borders {
+  padding: 0 30px;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+}
+.stats__number {
+  margin: 0;
+  padding: 30px 0 10px 0;
+  font-weight: 600;
+  font-size: 24px;
+  color: #222222;
+}
+.stats__name {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #acb2b4;
+}
+
+.video__wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1519px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.video__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.video__iconWrapper {
+  position: relative;
+  top: 160px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.video__icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.freeTrials {
+  padding: 160px 0;
+}
+.freeTrials__left {
+  display: flex;
+  width: 100%;
+  max-width: 665px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.freeTrials__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.freeTrials {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1100px) {
+  .freeTrials {
+    flex-direction: column;
+  }
+}
+.freeTrials__right {
+  padding: 30px 180px 0 15px;
+}
+.freeTrials__title {
+  width: 100%;
+  max-width: 543px;
+  font-size: 28px;
+  font-weight: 400;
+}
+.freeTrials__info {
+  padding: 0 0 40px 0;
+  width: 100%;
+  max-width: 546px;
+  line-height: 38px;
+  color: #acb2b4;
+}
+.freeTrials__btn {
+  padding: 15px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: 13px;
+  background-color: #333;
+  width: 20%;
+  color: #fff;
+  transition: all 0.25s linear;
+}
+.freeTrials__btn:hover {
+  background-color: #ffa500;
+  border-color: #ffa500;
+}
+
+.partners__title {
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+}
+.partners__list {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.partners__link {
+  display: flex;
+  width: 100%;
+  max-width: 167px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.partners__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer {
+  background-color: #000;
+}
+.footer__logo {
+  justify-content: center;
+}
+.footer__text {
+  padding: 0 0 40px 0;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  color: #acb2b4;
+  text-align: center;
+}
+.footer__copyright {
+  margin: 0;
+  padding: 40px 0;
+  color: #acb2b4;
+  text-align: center;
+}
+.footer__iconsList {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 200px;
+}
+.footer__iconsLink {
+  display: flex;
+  width: 100%;
+  max-width: 32px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer__icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=style.css.map */
+    </style>
+  </head>
+  <body> 
+    <div class="header" id="home">
+      <div class="header__page" id="particles-js">
+        <div class="header pageContent">
+          <div class="header__upperPart"><a class="header__logo" href="javascript:void(0)"> 
+              <h1 class="header__logoTitle">M</h1>
+              <div class="header__logoWrapper header__logoWrapper--rotated"><img class="header__logoIcon" src="/src/img/loupeWhite.png" alt="loupeIcon"/></div>
+              <h1 class="header__logoTitle">N</h1>
+              <div class="header__logoWrapper header__logoWrapper--stay"><img class="header__logoIcon" src="/src/img/loupeWhite.png" alt="loupeIcon"/></div></a>
+            <div class="header__navbar"> 
+              <ul class="header__list"> 
+                <li class="header__item"> <a class="header__link" href="#home">Home</a></li>
+                <li class="header__item"> <a class="header__link" href="#features">Features</a></li>
+                <li class="header__item"> <a class="header__link" href="#about">About </a></li>
+                <li class="header__item"> <a class="header__link" href="#videoBlock">Video Block</a></li>
+                <li class="header__item"> <a class="header__link" href="#freeTrials">Free Trials</a></li>
+                <li class="header__item header__item--active"><a class="header__link header__link--active" href="#">Try Demo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__title">
+            <p class="header__subtitleUpper">lorem ipsym dolor sit amet</p>
+            <h1 class="header__titleMain">NISI EGET LIGULA!</h1>
+            <p class="header__subtitleDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisi eget ligula ultricies porta. Integer in sapien non felis.</p>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="/src/js/particles.min.js"></script>
+      <script type="text/javascript" src="/src/js/app.js"></script>
+    </div>
+    <div class="content"> <a class="content__scrollUp" id="arrowUp" href="#home"><img class="content__scrollIcon" src="/src/img/up-arrow.png"/></a>
+      <div class="content__laptop"> <img class="content__laptopImg" src="/src/img/macbook.png" alt="logo"/></div>
+      <h2 class="content__title">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING. </h2>
+      <div class="content__boxes pageContent" id="features">
+        <div class="content__boxesRowOne">
+          <div class="content__infoBox">
+            <div class="content__iconWrapper"> <img class="content__icon" src="/src/img/iconMessages.png" alt="macBookImage"/></div>
+            <div class="content__text"><a class="content__boxTitle" href="javascript:void(0)">BEST CRM SYSTEM</a>
+              <p class="content__boxInfo">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            </div>
+          </div>
+          <div class="content__infoBox">
+            <div class="content__iconWrapper"> <img class="content__icon" src="/src/img/iconTime.png" alt="logo"/></div>
+            <div class="content__text"><a class="content__boxTitle" href="javascript:void(0)">TIME TRACKING</a>
+              <p class="content__boxInfo">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            </div>
+          </div>
+          <div class="content__infoBox">
+            <div class="content__iconWrapper"> <img class="content__icon" src="/src/img/iconDownload.png" alt="logo"/></div>
+            <div class="content__text"><a class="content__boxTitle" href="javascript:void(0)">DOWNLOAD EASILY</a>
+              <p class="content__boxInfo">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            </div>
+          </div>
+        </div>
+        <div class="content__boxesRowTwo">
+          <div class="content__infoBox">
+            <div class="content__iconWrapper"> <img class="content__icon" src="/src/img/iconChart.png" alt="logo"/></div>
+            <div class="content__text"><a class="content__boxTitle" href="javascript:void(0)">FINANCIAL CHARTS</a>
+              <p class="content__boxInfo">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            </div>
+          </div>
+          <div class="content__infoBox">
+            <div class="content__iconWrapper"> <img class="content__icon" src="/src/img/iconMark.png" alt="logo"/></div>
+            <div class="content__text"><a class="content__boxTitle" href="javascript:void(0)">BADGES FOR CUSTOMER</a>
+              <p class="content__boxInfo">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            </div>
+          </div>
+          <div class="content__infoBox">
+            <div class="content__iconWrapper"> <img class="content__icon" src="/src/img/iconCalendar.png" alt="logo"/></div>
+            <div class="content__text"><a class="content__boxTitle" href="javascript:void(0)">DAILY CALENDAR</a>
+              <p class="content__boxInfo">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="purchase"> 
+      <div class="purchase__content pageContent"> 
+        <div class="purchase__left">
+          <h2 class="purchase__title">NEED A PERFECT PRODUCT FOR YOUR BUSINESS?</h2>
+          <p class="purchase__info">Nam feugiat enim diam, sed bibendum diam gravida ac. Ut urna urna, blandit viverra luctus et, vulputate vitae ligula. Duis commodo vitae massa quis maximus.</p>
+        </div>
+        <div class="purchase__right"> <a class="purchase__btn" href="javascript:void(0)">Purchase Now </a><a class="purchase__btnDemo" href="#home">Try Our Demo</a></div>
+      </div>
+    </div>
+    <div class="stats pageContent" id="about">
+      <div class="stats__left"> 
+        <h2 class="stats__title">Quisque aliquam felis et sapien vulputate ut imperdiet.</h2>
+        <p class="stats__info">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisi eget ligula ultricies porta. Integer in sapien non felis scelerisque elementum. <br/>Aliquam scelerisque eros sit amet eleifend rhoncus. Morbi ut imperdiet mi, a dictum nisl. Nulla facilisi. Pellentesque rhoncus mattis lacus eget efficitur. <br/>Donec pretium, mauris in auctor posuere, ante ipsum tincidunt urna, gravida molestie dolor tellus eget nunc. Nullam vestibulum lorem sit amet quam suscipit mollis a eget enim. <br/>Quisque aliquam felis et sapien vulputate, nec scelerisque neque commodo. Quisque in dui turpis. Aliquam nec luctus orci, eget auctor felis.</p>
+        <div class="stats__numbers"> 
+          <div class="stats__numberEach"><span class="stats__number" id="numberComponents">259</span><span class="stats__name">Components</span></div>
+          <div class="stats__numberEach stats__numberEach--borders"><span class="stats__number" id="numberThemes">111+</span><span class="stats__name">Themes</span></div>
+          <div class="stats__numberEach"><span class="stats__number">Unlimited</span><span class="stats__name">Users</span></div>
+        </div>
+      </div>
+      <div class="stats__right">
+        <div class="stats__imgWrapper"> <img class="stats__img" src="/src/img/imac.png" alt="imacImage"/></div>
+      </div>
+    </div>
+    <div class="video" id="videoBlock"><a class="video__iconWrapper" href="https://www.youtube.com/watch?v=XjDh_5ZH9wQ"> <img class="video__icon" src="/src/img/play.png"/></a>
+      <div class="video__wrapper"><img class="video__image" src="/src/img/videoImage.jpg"/></div>
+    </div>
+    <div class="freeTrials" id="freeTrials">
+      <div class="freeTrials__left"> <img class="freeTrials__img" src="/src/img/data.jpg" alt="data"/></div>
+      <div class="freeTrials__right"> 
+        <h2 class="freeTrials__title">Nam feugiat enim diam, sed bibendum diam gravida ac!</h2>
+        <p class="freeTrials__info">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p><a class="freeTrials__btn" href="#home">Try Our Demo</a>
+      </div>
+    </div>
+    <div class="partners pageContent">
+      <h2 class="partners__title">Our partners</h2>
+      <ul class="partners__list"> 
+        <li class="partners__item"> <a class="partners__link" href="javascript:void(0)"><img class="partners__img" src="/src/img/partnerAdobe.png"/></a></li>
+        <li class="partners__item"> <a class="partners__link" href="javascript:void(0)"><img class="partners__img" src="/src/img/partnerGridgum.png"/></a></li>
+        <li class="partners__item"> <a class="partners__link" href="javascript:void(0)"><img class="partners__img" src="/src/img/partnerJquery.png"/></a></li>
+        <li class="partners__item"> <a class="partners__link" href="javascript:void(0)"><img class="partners__img" src="/src/img/partnerAdobe.png"/></a></li>
+        <li class="partners__item"> <a class="partners__link" href="javascript:void(0)"><img class="partners__img" src="/src/img/partnerGridgum.png"/></a></li>
+      </ul>
+    </div>
+    <footer> 
+      <div class="footer"> 
+        <div class="header__upperPart footer__logo pageContent"><a class="header__logo" href="javascript:void(0)"> 
+            <h1 class="header__logoTitle">M</h1>
+            <div class="header__logoWrapper header__logoWrapper--rotated"><img class="header__logoIcon" src="/src/img/loupeWhite.png" alt="loupeIcon"/></div>
+            <h1 class="header__logoTitle">N</h1>
+            <div class="header__logoWrapper header__logoWrapper--stay"><img class="header__logoIcon" src="/src/img/loupeWhite.png" alt="loupeIcon"/></div></a></div>
+        <p class="footer__text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis imperdiet egestas.</p>
+        <ul class="footer__iconsList"> 
+          <li class="footer__iconsItem"> <a class="footer__iconsLink" href="javascript:void(0)"><img class="footer__icon" src="/src/img/facebook (1).png" alt="icon"/></a></li>
+          <li class="footer__iconsItem"> <a class="footer__iconsLink" href="javascript:void(0)"><img class="footer__icon" src="/src/img/twitter (1).png" alt="icon"/></a></li>
+          <li class="footer__iconsItem"> <a class="footer__iconsLink" href="javascript:void(0)"><img class="footer__icon" src="/src/img/google-plus.png" alt="icon"/></a></li>
+          <li class="footer__iconsItem"> <a class="footer__iconsLink" href="javascript:void(0)"><img class="footer__icon" src="/src/img/pinterest.png" alt="icon"/></a></li>
+          <li class="footer__iconsItem"> <a class="footer__iconsLink" href="javascript:void(0)"><img class="footer__icon" src="/src/img/trending (1).png" alt="icon"/></a></li>
+        </ul>
+        <p class="footer__copyright">
+           © Copyright 2021, GRIDGUM.<br/>All Rights Reserved</p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/src/js/script.js"></script>
+  </body>
+</html>
